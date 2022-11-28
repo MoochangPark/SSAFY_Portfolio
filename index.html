@@ -97,9 +97,30 @@
             font-size: 100%;
             font: inherit;
             vertical-align: baseline;
+            scroll-behavior: smooth;
         }
 
         /* reset.css */
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 1vmin;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #fff;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #3c90e2;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0b6dcf;
+        }
 
         body {
             width: 100vw;
@@ -110,9 +131,42 @@
             line-height: 1.3;
         }
 
+
         a {
             color: #3c90e2;
             text-decoration: none;
+        }
+
+        .scrollContainer {
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scrollbtn {
+            width: 100%;
+            height: 5%;
+            font-weight: 900;
+            font-size: 4vmin;
+            opacity: 0.3;
+        }
+
+        .scrollContainer a:first-child {
+            opacity: 1;
+        }
+
+
+        .up {
+            font-weight: 900;
+            font-size: 6vmin;
+            position: fixed;
+            bottom: 0;
+            right: 0;
         }
 
         .topBar {
@@ -130,6 +184,16 @@
             font-size: 7vmin;
             padding-left: 7vmin;
             padding-top: 5vmin;
+        }
+
+        .name {
+            color: #3c90e2;
+        }
+
+        #mcemoji {
+            display: none;
+            width: 25%;
+            height: 25%;
         }
 
         .dots {
@@ -261,9 +325,22 @@
     <!-- 디자인용 최상단 색깔 -->
     <p class="topBar"></p>
 
+    <!-- 버튼 -->
+    <div class="scrollContainer">
+        <a href="#first" id="btn1" class="scrollbtn">1️⃣</a>
+        <a href="#second" id="btn2" class="scrollbtn">2️⃣</a>
+        <a href="#third" id="btn3" class="scrollbtn">3️⃣</a>
+        <a href="#fourth" id="btn4" class="scrollbtn">4️⃣</a>
+        <a href="#fifth" id="btn5" class="scrollbtn">5️⃣</a>
+    </div>
+    <!-- 맨 위로 버튼 -->
+
+    <a href="#" class="up">⬆️</a>
+
     <!-- 소개 타이틀 -->
-    <div>
-        <div class="title">안녕하세요,<br />저는 박무창입니다<span class="dots">.</span></div>
+    <div id="first">
+        <div class="title">안녕하세요,<br />저는 <span class="name">박무창</span>입니다<span class="dots">.</span></div>
+        <img src="./mcemoji.gif" alt="주인장이모지" id="mcemoji">
 
         <!-- 소개 설명 -->
         <div class="titleSub">프론트엔드 개발자이면서 인터렉티브 디벨로퍼가 되기를 희망하고 있으며 <span class="newmorphism">뉴모피즘</span>적인 인터페이스와
@@ -277,7 +354,7 @@
     <p class="cutLine"></p>
 
     <!-- SSAFY 활동 -->
-    <div class="experience">
+    <div class="experience" id="second">
         <span class="experienceTitle">Project Experience<span class="dots">.</span></span>
 
         <div class="project">
@@ -331,8 +408,8 @@
 
         <div class="project">
             <p class="logo"><a href="https://github.com/MoochangPark/CATCHCATCH">CATCH CATCH</a><span
-                    class="dots">.</span></p>
-            <p class="detail">Frontend Developer <br /> 2022.10.10 ~ 2022.11.25</p>
+                    class="dots">.</span><span>🏆</span></p>
+            <p class="detail">Frontend Developer <br /> 2022.10.10 ~ 2022.11.25 <br /> 삼성청년아카데미 우수상</p>
             <p class="tag">프로젝트 설명<span class="dots">.</span></p>
             <p class="detail">주어진 시간동안 적에게서 살아남는 아케이드 게임 CATCHCATCH와 게이미피케이션을 적용해 코딩 교육이 가능한 CODE CATCH 프로젝트입니다.</p>
             <p class="tag">내가 진행한 작업<span class="dots">.</span></p>
@@ -358,7 +435,7 @@
 
 
     <!-- 대학시절 활동 -->
-    <div class="other">
+    <div class="other" id="third">
         <span class="otherTitle">Other Experience<span class="dots">.</span></span>
 
         <div class="Project">
@@ -369,10 +446,13 @@
         </div>
 
         <div class="Project">
-            <p class="logo">햇귀 프로젝트<span class="dots">.</span></p>
-            <p class="detail">Frontend Developer & Embeded Developer <br /> 2021.03.01 ~ 2021.07.11</p>
+            <p class="logo">햇귀 프로젝트<span class="dots">.</span><span>🏆</span></p>
+            <p class="detail">Frontend Developer & Embeded Developer <br /> 2021.03.01 ~ 2021.07.11 <br /> 조선대 IT 종합학술대회
+                동상
+            </p>
             <p class="detail">손전등에 임베디드가 결합되어 위급상황 시에 손전등과 NFC 태그를 이용하여 사용자와 외부의 도우미에게 정보 교류가 가능해 구출에 도움을 줄 수 있는
                 프로젝트입니다.</p>
+            <p class="detail">🖥️ ubuntu환경의 로컬 pc에서 Nginx 서버 환경 구성 및 HTML과 JavaScript기반의 Bootstrap 웹 페이지 제작</p>
         </div>
 
         <div class="Project">
@@ -380,6 +460,7 @@
             <p class="detail">Frontend Developer & Embeded Developer <br /> 2022.09.01 ~ 2022.11.31</p>
             <p class="detail">스마트 멀티탭으로 가정에 연결 가능한 전자기기들을 원격으로 제어가 가능하며, 전력 소모량을 측정하여 사용자의 전력 소비량에 비한 비용을 줄여줄 수 있는
                 프로젝트입니다.</p>
+            <p class="detail">🖥️ ubuntu환경의 로컬 pc에서 Nginx 서버 환경 구성 및 python을 이용한 ESP32 제어</p>
         </div>
 
     </div>
@@ -387,7 +468,7 @@
     <p class="cutLine"></p>
 
     <!-- 기술 스택 -->
-    <div class="Skills">
+    <div class="Skills" id="fourth">
         <span class="skillTitle">Skills<span class="dots">.</span></span>
 
         <div class="skill">
@@ -439,7 +520,7 @@
     <p class="cutLine"></p>
 
     <!-- 기타 링크 -->
-    <div class="contact">
+    <div class="contact" id="fifth">
         <p class="logo">Contact<span class="dots">.</span></p>
         <ul class="contectUlDetail">
             <li><a href="mailto:sodauschlrdh@naver.com">이메일</a></li>
@@ -468,6 +549,50 @@
     newmorphism.addEventListener('mouseout', () => {
         const newmorphismSub = document.querySelector('.newmorphismSub');
         newmorphismSub.style.display = "none";
+    })
+
+    const name = document.querySelector('.name');
+    name.addEventListener('mouseover', (event) => {
+        const mcemoji = document.querySelector('#mcemoji');
+        mcemoji.style.display = "block";
+        mcemoji.style.position = "absolute";
+        mcemoji.style.top = '0px';
+        mcemoji.style.right = '0px';
+
+    })
+
+    name.addEventListener('mouseout', () => {
+        const mcemoji = document.querySelector('#mcemoji');
+        mcemoji.style.display = "none";
+    })
+
+    window.addEventListener("scroll", (event) => {
+        const scrollLocation = (document.documentElement.scrollTop + window.innerHeight) / document.documentElement.scrollHeight;
+        for (let i = 1; i < 6; i++) {
+            const btn = document.querySelector(`#btn${i}`);
+            btn.style.opacity = "0.3";
+        }
+        console.log(scrollLocation)
+        if (scrollLocation > 0 && scrollLocation < 0.249) {
+            const btn = document.querySelector("#btn1");
+            btn.style.opacity = "1";
+        }
+        else if (scrollLocation >= 0.249 && scrollLocation < 0.74) {
+            const btn = document.querySelector("#btn2");
+            btn.style.opacity = "1";
+        }
+        else if (scrollLocation >= 0.74 && scrollLocation < 0.93) {
+            const btn = document.querySelector("#btn3");
+            btn.style.opacity = "1";
+        }
+        else if (scrollLocation >= 0.75 && scrollLocation < 0.96) {
+            const btn = document.querySelector("#btn4");
+            btn.style.opacity = "1";
+        }
+        else {
+            const btn = document.querySelector("#btn5");
+            btn.style.opacity = "1";
+        }
     })
 </script>
 
