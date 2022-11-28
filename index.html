@@ -351,7 +351,7 @@
         <span class="experienceTitle">Project Experience<span class="dots">.</span></span>
 
         <div class="project">
-            <p class="logo"><a href="https://github.com/MoochangPark/EDDUSSAFY">EDDU SSAFY</a><span
+            <p class="logo"><a href="https://github.com/MoochangPark/EDDUSSAFY" target="_blank">EDDU SSAFY</a><span
                     class="dots">.</span></p>
             <p class="detail">Frontend Developer <br /> 2022.07.05 ~ 2022.08.19</p>
             <p class="tag">프로젝트 설명<span class="dots">.</span></p>
@@ -375,7 +375,8 @@
         </div>
 
         <div class="project">
-            <p class="logo"><a href="https://github.com/MoochangPark/GGANBU.GG">GGANBU GG</a><span class="dots">.</span>
+            <p class="logo"><a href="https://github.com/MoochangPark/GGANBU.GG" target="_blank">GGANBU GG</a><span
+                    class="dots">.</span>
             </p>
             <p class="detail">Frontend Developer <br /> 2022.08.22 ~ 2022.10.07</p>
             <p class="tag">프로젝트 설명<span class="dots">.</span></p>
@@ -400,7 +401,7 @@
         </div>
 
         <div class="project">
-            <p class="logo"><a href="https://github.com/MoochangPark/CATCHCATCH">CATCH CATCH</a><span
+            <p class="logo"><a href="https://github.com/MoochangPark/CATCHCATCH" target="_blank">CATCH CATCH</a><span
                     class="dots">.</span><span>🏆</span></p>
             <p class="detail">Frontend Developer <br /> 2022.10.10 ~ 2022.11.25 <br /> 삼성청년아카데미 우수상</p>
             <p class="tag">프로젝트 설명<span class="dots">.</span></p>
@@ -517,10 +518,10 @@
         <p class="logo">Contact<span class="dots">.</span></p>
         <ul class="contectUlDetail">
             <li><a href="mailto:sodauschlrdh@naver.com">이메일</a></li>
-            <li><a href="https://blog.naver.com/sodauschlrdh">블로그</a></li>
-            <li><a href="https://github.com/JMBFLY">깃허브</a></li>
-            <li><a href="https://github.com/MoochangPark">싸피깃</a></li>
-            <li><a href="https://jmbfly.github.io/portfolio_ssafy_pmc_1_21/">학습용 포폴</a></li>
+            <li><a href="https://blog.naver.com/sodauschlrdh" target="_blank">블로그</a></li>
+            <li><a href="https://github.com/JMBFLY" target="_blank">깃허브</a></li>
+            <li><a href="https://github.com/MoochangPark" target="_blank">싸피깃</a></li>
+            <li><a href="https://jmbfly.github.io/portfolio_ssafy_pmc_1_21/" target="_blank">학습용 포폴</a></li>
         </ul>
     </div>
 
@@ -586,6 +587,15 @@
             const btn = document.querySelector("#btn5");
             btn.style.opacity = "1";
         }
+    })
+
+    const colorList = ["3c90e2", "ff6304", "9acd03", "663309", "ffd700"]
+    const topbar = document.querySelector(".topBar");
+    let i = 0;
+    topbar.addEventListener("click", () => {
+        if (i > 3) i = 0;
+        else i++;
+        topbar.style.backgroundColor = `#${colorList[i]}`;
     })
 </script>
 
