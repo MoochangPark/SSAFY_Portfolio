@@ -367,7 +367,7 @@
                 <li>REDUX를 이용한 서버와 문제집 동기화</li>
             </ul>
             <p class="tag">직접 사용한 기술<span class="dots">.</span></p>
-            <p class="detail"> REACT, OPENVIDU, REDUX</p>
+            <p class="detail" id="language"> REACT, OPENVIDU, REDUX</p>
             <p class="tag">진행하면서 이해한 것<span class="dots">.</span></p>
             <ul class="ulDetail">
                 <li>React의 Component구조 방식</li>
@@ -393,7 +393,7 @@
                 <li>Teachable Machine의 Tensorflow js를 이용한 ai 추천 시스템 개발</li>
             </ul>
             <p class="tag">직접 사용한 기술<span class="dots">.</span></p>
-            <p class="detail"> Next.js, Teachable Machine, Axios</p>
+            <p class="detail" id="language"> Next.js, Teachable Machine, Axios</p>
             <p class="tag">진행하면서 이해한 것<span class="dots">.</span></p>
             <ul class="ulDetail">
                 <li>SSR과 CSR의 차이</li>
@@ -417,7 +417,7 @@
                 <li>Electron.js를 이용한 데스크톱 앱 개발</li>
             </ul>
             <p class="tag">직접 사용한 기술<span class="dots">.</span></p>
-            <p class="detail"> JS, phaser.js, Electron.js</p>
+            <p class="detail" id="language"> JS, phaser.js, Electron.js</p>
             <p class="tag">진행하면서 이해한 것<span class="dots">.</span></p>
             <ul class="ulDetail">
                 <li>JS의 class의 형식과 스코프의 개념</li>
@@ -563,13 +563,15 @@
         mcemoji.style.display = "none";
     })
 
+    const colorList = ["3c90e2", "ff6304", "9acd03", "663309", "ffd700"]
+    
     window.addEventListener("scroll", (event) => {
         const scrollLocation = (document.documentElement.scrollTop + window.innerHeight) / document.documentElement.scrollHeight;
         for (let i = 1; i < 6; i++) {
             const btn = document.querySelector(`#btn${i}`);
             btn.style.opacity = "0.3";
         }
-        console.log(scrollLocation)
+
         if (scrollLocation > 0 && scrollLocation < 0.249) {
             const btn = document.querySelector("#btn1");
             btn.style.opacity = "1";
@@ -578,11 +580,11 @@
             const btn = document.querySelector("#btn2");
             btn.style.opacity = "1";
         }
-        else if (scrollLocation >= 0.74 && scrollLocation < 0.93) {
+        else if (scrollLocation >= 0.74 && scrollLocation < 0.87) {
             const btn = document.querySelector("#btn3");
             btn.style.opacity = "1";
         }
-        else if (scrollLocation >= 0.75 && scrollLocation < 0.96) {
+        else if (scrollLocation >= 0.87 && scrollLocation < 0.96) {
             const btn = document.querySelector("#btn4");
             btn.style.opacity = "1";
         }
@@ -590,9 +592,13 @@
             const btn = document.querySelector("#btn5");
             btn.style.opacity = "1";
         }
+
+        const languages = document.querySelectorAll("#language");
+        languages.forEach((e)=>{e.style.color = `#${colorList[Math.floor(Math.random() * 5)]}`})
+
     })
 
-    const colorList = ["3c90e2", "ff6304", "9acd03", "663309", "ffd700"]
+
     const topbar = document.querySelector(".topBar");
     let i = 0;
     topbar.addEventListener("click", () => {
@@ -605,6 +611,8 @@
     no.addEventListener("click", () => {
         alert("나는 빼고요! 메롱")
     })
+
+
 </script>
 
 </html>
