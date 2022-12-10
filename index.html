@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박무창의 포트폴리오</title>
+  <link rel="icon" href="image/two.jpg">
+</head>
+<style>
+  h1 {
+    font-size: 4.5vmin;
+    border-bottom: 4px solid rgba(0, 0, 0, .8);
+    padding-bottom: 10px;
+    white-space: nowrap;
+  }
+
+  .white h1 {
+    border-bottom: 4px solid rgba(255, 255, 255, 0.8);
+  }
+
+  span {
+    font-size: 2vmin;
+  }
+
+  p {
+    font-size: 1.4vmin;
+  }
+
+  a {
+    text-decoration: none;
+    color: #f1f0e9;
+  }
+
+
+  * {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: normal;
+    word-break: keep-all;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .item {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  :root {
+    --item-1: -13;
+    --item-2: -12;
+    --item-3: -11;
+    --item-4: -10;
+    --item-5: -9;
+    --item-6: -8;
+    --item-7: -7;
+    --item-8: -6;
+    --item-9: -5;
+    --item-10: -4;
+    --item-11: -3;
+    --item-12: -2;
+    --item-13: -1;
+    --item-14: 0;
+  }
+
+
+  .item-1 {
+    background-image: url(image/developer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+    filter: grayscale(100%);
+    z-index: var(--item-1);
+  }
+
+  .item-2 {
+    background-color: #f1f0e9;
+    width: 50%;
+    z-index: var(--item-2);
+  }
+
+  .item-3 {
+    background-color: #fdbab3;
+    width: 50%;
+    margin-left: 50%;
+    border-left: 2px solid #040F42;
+    z-index: var(--item-3);
+  }
+
+  .item-4 {
+    background-color: #fdbab3;
+    width: 50%;
+    margin-right: 50%;
+    z-index: var(--item-4);
+  }
+
+  .item-5 {
+    background-color: #fdbab3;
+    width: 50%;
+    margin-right: 50%;
+    z-index: var(--item-5);
+  }
+
+
+  .item-6 {
+    background-color: #fdbab3;
+    width: 50%;
+    margin-right: 50%;
+    z-index: var(--item-6);
+  }
+
+  .item-7 {
+    background-color: #fdbab3;
+    width: 50%;
+    margin-right: 50%;
+    z-index: var(--item-7);
+  }
+
+  .item-8 {
+    background-color: #fdbab3;
+    width: 50%;
+    margin-right: 50%;
+    z-index: var(--item-8);
+  }
+
+  .item-9 {
+    background-color: #2e6c4c;
+    z-index: var(--item-9);
+  }
+
+  .item-10 {
+    background-color: #2e6c4c;
+    z-index: var(--item-10);
+  }
+
+  .item-11 {
+    background-color: #2e6c4c;
+    z-index: var(--item-11);
+  }
+
+  .item-12 {
+    background-color: #2e6c4c;
+    z-index: var(--item-12);
+  }
+
+  .item-13 {
+    background-color: #014396;
+    z-index: var(--item-13);
+  }
+
+  .item-14 {
+    background-color: #fe8302;
+    z-index: var(--item-14);
+  }
+
+  .col-5 {
+    padding: 20px;
+  }
+
+  .bold {
+    font-size: 2vmin;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+
+  .imgContain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skillImg {
+    width: 80%;
+  }
+
+  .flexrow {
+    display: flex;
+    gap: 10%;
+  }
+
+  .white {
+    color: #f1f0e9;
+  }
+
+  .flexs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flexs-notop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flexs-notop h1 {
+    margin-bottom: 10px;
+  }
+
+  .relative {
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  .spacing {
+    line-height: 200%;
+  }
+
+  .hash {
+    display: flex;
+    gap: 10px;
+  }
+
+  .hash b {
+    border: 1px solid #f1f0e9;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .imgs {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin-top: 3.5%;
+  }
+
+  .img-div img {
+    width: 40vmin;
+  }
+
+  .tags {
+    margin: 0;
+    font-size: 1.7vmin;
+  }
+
+  .link {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+  }
+
+  .containbg {
+    border: 1px solid #f1f0e9;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .gaps {
+    gap: 3vmin;
+    margin-top: 0;
+  }
+
+  .no-border {
+    border: none;
+    font-size: 5vmin;
+  }
+
+  .contentrow {
+    display: flex;
+    flex-direction: row;
+    gap: 5vmin;
+  }
+
+  .stack__card {
+    position: sticky;
+    top: 0;
+  }
+</style>
+
+<body>
+  <div class="stack">
+    <div class="stack__card">
+      <section class="item item-1">
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-2">
+        <div class="col-5">
+          <h1>상상하는 개발자 <br />박무창 입니다</h1>
+          <span>"웹 페이지의 매력에 빠진 프론트 개발자"</span>
+          <p>2022년 하반기에 JS와 CSS 공부를 하기 시작했습니다. <br />CSS가 주는 아름다운 디자인과 JS가 만드는 인터렉티브한 동작에 매력을 느끼면서 본격적으로 개발하기
+            시작했습니다. <br />저는 사용자들이 UX를 고려한 기능에 재미있는 이펙트를 더해서<br /><strong>웹 페이지에서 새롭고 재밋는 경험을 해볼 수 있었으면
+              좋곘습니다.</strong> <br />그렇게 생각한 이후로 매일마다 프론트 개발자로서의 개발능력과 디자인 안목을 같이 키워나가고 있습니다.</p>
+        </div>
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-3">
+        <div></div>
+        <div class="col-5">
+          <h1 class="center">기술 스택</h1>
+          <p class="bold"> 저는 다음과 같은 기술 스택을 가지고 있습니다 </p>
+        </div>
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-4">
+        <div class="col-5">
+          <div class="imgContain"><img src="image/communication.svg" alt="" class="skillImg"></div>
+          <h1>커뮤니케이션 ⭐⭐⭐</h1>
+          <p class="bold">적극적으로 참여하려는 생각을 표현합니다</p>
+          <p class="bold">커뮤니케이션은 자주 모이는 것이 좋다고 생각합니다</p>
+          <p class="bold">의견을 자주 건의하기 위해 노력합니다</p>
+        </div>
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-5">
+        <div class="col-5">
+          <div class="imgContain"><img src="image/web.svg" alt="" class="skillImg"></div>
+          <h1>웹 페이지 ⭐⭐⭐⭐</h1>
+          <p class="bold">인터렉티브 페이지 제작 경험이 있습니다</p>
+          <p class="bold">반응형 페이지를 만든 경험이 있습니다</p>
+          <p class="bold">다양한 OS의 브라우저에 대한 CSS를 적용할 수 있습니다</p>
+        </div>
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-6">
+        <div class="col-5">
+          <div class="imgContain"><img src="image/javascript.svg" alt="" class="skillImg"></div>
+          <h1>JS ⭐⭐⭐⭐</h1>
+          <p class="bold">CommonJS와 ES6를 구분해서 사용할 수 있습니다</p>
+          <p class="bold">class방식과 function방식을 모두 사용할 수 있습니다</p>
+          <p class="bold">JS로 간단한 DOM 트리를 적용할 수 있습니다</p>
+        </div>
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-7">
+        <div class="col-5">
+          <div class="imgContain"><img src="image/react.svg" alt="" class="skillImg"></div>
+          <h1>React ⭐⭐⭐</h1>
+          <p class="bold">Page를 생성하고 연결할 수 있습니다</p>
+          <p class="bold">jsx에 동적 html태그를 생성할 수 있습니다</p>
+          <p class="bold">React-query를 연결할 수 있습니다</p>
+        </div>
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-8">
+        <div class="col-5">
+          <div class="imgContain"><img src="image/design.svg" alt="" class="skillImg"></div>
+          <h1>Figma ⭐⭐⭐</h1>
+          <p class="bold">Page 구성을 기획할 수 있습니다</p>
+          <p class="bold">필요한 component를 구성할 수 있습니다</p>
+          <p class="bold">반응형 웹 디자인을 표현할 수 있습니다</p>
+        </div>
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-9 white">
+        <div class="col-5">
+          <h1>프로젝트 경험</h1>
+          <p>지금까지 이러한 프로젝트를 진행해 보았습니다</p>
+          <p>저는 프론트엔드에서 개발을 진행하였습니다</p>
+        </div>
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-10 white flexrow relative">
+        <div class="link">
+          <a href="https://github.com/MoochangPark/EDDUSSAFY" target="_blank">
+            <p>프로젝트 구경가기 →</p>
+          </a>
+        </div>
+        <div class="col-5 flexs">
+          <div class="flexs-notop">
+            <h1>EDDU SSAFY</h1>
+            <span>Frontend Developer</span>
+            <span>2022.07.05 ~ 2022.08.19</span>
+          </div>
+
+          <div>
+            <h2>프로젝트 설명</h2>
+            <p class="spacing">교육 현장에서 선생님과 학생들이 화상통화와 메신저로 소통을 하며
+              <br />선생님이 만든 문제를 같이 풀 수 있는 원격 교육용 프로젝트입니다
+            </p>
+          </div>
+
+          <div>
+            <h2>내가 진행한 작업</h2>
+            <p>★ REACT로 문제집을 구현</p>
+            <p>★ CSS를 이용하여 프로젝트 디자인</p>
+            <p>★ OPENVIDU의 화면과 메신저 디자인 구조 변경</p>
+            <p>★ REDUX를 이용한 서버와 문제집 동기화</p>
+          </div>
+
+          <div>
+            <h2>직접 사용한 기술</h2>
+            <div class="hash">
+              <b>REACT</b>
+              <b>OPENVIDU</b>
+              <b>REDUX</b>
+            </div>
+          </div>
+
+          <div>
+            <h2>진행하면서 이해한 것</h2>
+            <p>1. React의 Component구조 방식</p>
+            <p>2. CSS를 이용하여 margin과 padding의 차이</p>
+            <p>3. 컴포넌트의 생명주기 흐름</p>
+            <p>4. REDUX의 전역 저장소 생성과 저장하는 방법</p>
+          </div>
+
+        </div>
+
+        <div class="imgs flexs">
+          <div class="img-div">
+            <a href="image/eddu01.jpg" target="_blank"><img src="image/eddu01.jpg" alt=""></a>
+            <p class="tags">
+              [ 프로젝트 메인 화면 ]
+            </p>
+          </div>
+          <div class="img-div">
+            <a href="image/eddu02.gif" target="_blank"><img src="image/eddu02.gif" alt=""></a>
+            <p class="tags">
+              [ 프로젝트 화상 통화 및 채팅 ]
+            </p>
+          </div>
+          <div class="img-div">
+            <a href="image/eddu03.gif" target="_blank"><img src="image/eddu03.gif" alt=""></a>
+            <p class="tags">
+              [ 문제집과 문제 생성 ]
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-11 white flexrow">
+        <div class="link">
+          <a href="https://github.com/MoochangPark/GGANBU.GG" target="_blank">
+            <p>프로젝트 구경가기 →</p>
+          </a>
+        </div>
+        <div class="col-5 flexs relative">
+          <div class="flexs-notop">
+            <h1>GGANBU.GG</h1>
+            <span>Frontend Developer</span>
+            <span>2022.08.22 ~ 2022.10.07</span>
+          </div>
+
+          <div>
+            <h2>프로젝트 설명</h2>
+            <p class="spacing">League of Legends 유저를 위한 인게임 캐릭터 선택 추천 시스템과
+              <br />비유저를 위한 게임 흥미를 가질 수 있는 다양한 활동들이 있는 프로젝트입니다
+            </p>
+          </div>
+
+          <div>
+            <h2>내가 진행한 작업</h2>
+            <p>★ Next.js를 이용한 프로젝트 구성</p>
+            <p>★ CSS를 이용하여 animation 개발</p>
+            <p>★ axios를 이용한 서버와 데이터 연결</p>
+            <p>★ Teachable Machine를 이용한 ai 추천 시스템 개발</p>
+          </div>
+
+          <div>
+            <h2>직접 사용한 기술</h2>
+            <div class="hash">
+              <b>NEXT.JS</b>
+              <b>TENSORFLOW</b>
+              <b>AXIOS</b>
+            </div>
+          </div>
+
+          <div>
+            <h2>진행하면서 이해한 것</h2>
+            <p>1. SSR과 CSR의 기능적 차이</p>
+            <p>2. ANIMATION FRAME 적용 방법</p>
+            <p>3. CSS와 HTML 데이터 처리 적용</p>
+            <p>4. video 태그의 동적 생성 webp 형식 적용법</p>
+          </div>
+
+        </div>
+
+        <div class="imgs flexs">
+          <div class="img-div">
+            <a href="image/gg01.png" target="_blank"><img src="image/gg01.png" alt=""></a>
+            <p class="tags">
+              [ 프로젝트 메인 화면 ]
+            </p>
+          </div>
+          <div class="img-div">
+            <a href="image/gg02.png" target="_blank"><img src="image/gg02.png" alt=""></a>
+            <p class="tags">
+              [ 사용자 빅데이터 캐릭터 추천 ]
+            </p>
+          </div>
+          <div class="img-div">
+            <a href="image/gg03.png" target="_blank"><img src="image/gg03.png" alt=""></a>
+            <p class="tags">
+              [ 인게임 캐릭터 AI 추천 ]
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-12 white flexrow">
+        <div class="link">
+          <a href="https://github.com/MoochangPark/CATCHCATCH" target="_blank">
+            <p>프로젝트 구경가기 →</p>
+          </a>
+        </div>
+        <div class="col-5 flexs relative">
+          <div class="flexs-notop">
+            <h1>CATCH CATCH</h1>
+            <span>Frontend Developer</span>
+            <span>2022.10.10 ~ 2022.11.25</span>
+            <span>삼성청년아카데미 우수상</span>
+          </div>
+
+          <div>
+            <h2>프로젝트 설명</h2>
+            <p class="spacing">주어진 시간동안 적에게서 살아남는 아케이드 게임 CATCHCATCH와
+              <br />게이미피케이션을 적용해 코딩 교육이 가능한 CODE CATCH 프로젝트입니다
+            </p>
+          </div>
+
+          <div>
+            <h2>내가 진행한 작업</h2>
+            <p>★ REACT로 문제집을 구현</p>
+            <p>★ CSS를 이용하여 프로젝트 디자인</p>
+            <p>★ OPENVIDU의 화면과 메신저 디자인 구조 변경</p>
+            <p>★ REDUX를 이용한 서버와 문제집 동기화</p>
+          </div>
+
+          <div>
+            <h2>직접 사용한 기술</h2>
+            <div class="hash">
+              <b>REACT</b>
+              <b>OPENVIDU</b>
+              <b>REDUX</b>
+            </div>
+          </div>
+
+          <div>
+            <h2>진행하면서 이해한 것</h2>
+            <p>1. React의 Component구조 방식</p>
+            <p>2. CSS를 이용하여 margin과 padding의 차이</p>
+            <p>3. 컴포넌트의 생명주기 흐름</p>
+            <p>4. REDUX의 전역 저장소 생성과 저장하는 방법</p>
+          </div>
+
+        </div>
+
+        <div class="imgs flexs">
+          <div class="img-div">
+            <a href="image/cc0.jpg" target="_blank"><img src="image/cc0.jpg" alt=""></a>
+            <p class="tags">
+              [ 프로젝트 메인 화면 ]
+            </p>
+          </div>
+          <div class="img-div">
+            <a href="image/cc1.gif" target="_blank"><img src="image/cc1.gif" alt=""></a>
+            <p class="tags">
+              [ CATCH CATCH 플레이 영상 ]
+            </p>
+          </div>
+          <div class="img-div">
+            <a href="image/cc2.gif" target="_blank"><img src="image/cc2.gif" alt=""></a>
+            <p class="tags">
+              [ CODE CATCH 플레이 영상 ]
+            </p>
+          </div>
+        </div>
+
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-13 white flexrow">
+        <div class="col-5 flexs relative gaps">
+
+          <h1 class="no-border center">학부생 경험</h1>
+
+          <div class="containbg">
+            <h2>조선대학교</h2>
+            <p>컴퓨터공학과 <br />2015.03.01 ~ 2022.02.25</p>
+            <p>컴퓨터공학과에서 4년간 공부하며 컴퓨터 언어와 자료구조, 컴퓨터 네트워크 등의 과목을 이수하였습니다
+              <br /> 학기 중에 교직이수를 수강하였고, 교수님과 함께 소프트웨어 교육을 다녔습니다
+            </p>
+          </div>
+
+          <div class="containbg">
+            <h2>햇귀 프로젝트</h2>
+            <p>Frontend Developer & Embeded Developer<br />2021.03.01 ~ 2021.07.11<br />조선대 IT 종합학술대회 동상</p>
+            <p>★ 손전등에 임베디드가 결합되어 위급상황 시에 손전등과 NFC 태그를 이용하여 <br />
+              사용자와 외부의 도우미에게 정보 교류가 가능해 구출에 도움을 줄 수 있는 프로젝트입니다
+            </p>
+            <p>☞ ubuntu환경의 로컬 pc에서 Nginx 서버 환경 구성</p>
+            <p>☞ HTML과 JavaScript기반의 Bootstrap 웹 페이지 제작 경험</p>
+          </div>
+
+          <div class="containbg">
+            <h2>스마트 IOT 멀티탭</h2>
+            <p>Frontend & Embeded Developer<br />2021.09.01 ~ 2021.11.31</p>
+            <p>★ 스마트 멀티탭으로 가정에 연결 가능한 전자기기들을 원격으로 제어가 가능하며
+              <br /> 전력 소모량을 측정하여 사용자의 전력 소비량에 비한 비용을 줄여줄 수 있는 프로젝트입니다
+            </p>
+            <p>☞ ubuntu환경의 로컬 pc에서 Nginx 서버 환경 구성 및 python을 이용한 ESP32 제어 경험</p>
+          </div>
+        </div>
+
+      </section>
+    </div>
+    <div class="stack__card">
+      <section class="item item-14 white flexrow">
+        <div class="col-5 flexs relative">
+          <h1 class="center">저에 대해 더 궁금하다면 살펴보세요</h1>
+          <div class="contentrow">
+            <a href="mailto:sodauschlrdh@naver.com" target="_blank"><span class="no-border">이메일</span></a>
+            <a href="https://blog.naver.com/sodauschlrdh" target="_blank"><span class="no-border">블로그</span></a>
+            <a href="https://github.com/JMBFLY" target="_blank"><span class="no-border">깃허브</span></a>
+            <a href="https://github.com/MoochangPark" target="_blank"><span class="no-border">싸피깃</span></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
